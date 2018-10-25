@@ -18,7 +18,7 @@ def read_csv(filename):
     #read file and append list
     path = os.path.join('./input/', filename)
     with open(path, encoding='utf-8') as csvfile:
-        reader = csv.reader(csvfile)
+        reader = csv.reader(csvfile, delimiter=';')
         for row in reader:
             data.append(row)
             
