@@ -1,12 +1,8 @@
 # Table of Contents
 1. [Problem](README.md#problem)
-2. [Input Dataset](README.md#input-dataset)
-3. [Instructions](README.md#instructions)
-4. [Output](README.md#output)
-5. [Tips on getting an interview](README.md#tips-on-getting-an-interview)
-6. [Instructions to submit your solution](README.md#instructions-to-submit-your-solution)
-7. [FAQ](README.md#faq)
-8. [Questions?](README.md#questions?)
+2. [Approach](README.md#approach)
+3. [Run instructions](README.md#run instruction)
+4. [Questions?](README.md#questions?)
 
 # Problem
 
@@ -45,3 +41,7 @@ When the code is executed as a script, I collect the name of the input and the t
 # Run instructions
 
 To run the script, navigate to the top of the `h1b_stats` directory and run `run.sh` in your shell. It is also possible to directly run the script `h1b_stats.py` in the `src/` folder by placing the input `csv` file in the `input` folder then entering the following instructions in the shell: `python3 ./h1b_stats <input-file-name> <output-file-name-1> <output-file-name-2>`. The output files will be saved in the output folder.
+
+# Questions?
+
+If you cannot find an answer to you question in this README email me at jonathan.schnabel31@gmail.com
