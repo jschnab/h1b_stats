@@ -16,7 +16,7 @@ def read_csv(filename):
     data = []
     
     #read file and append list
-    path = os.path.join('../input/', filename)
+    path = os.path.join('./input/', filename)
     with open(path, encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
@@ -64,7 +64,7 @@ def get_top_occupations(data, top, output_name):
     total_certif = sum(c.values())
     
     #write data in csv file
-    path = os.path.join('../output/', output_name)
+    path = os.path.join('./output/', output_name)
     with open(path, 'w') as txtfile:
         writer = csv.writer(txtfile, delimiter=';')
         writer.writerow(['TOP_OCCUPATIONS', 
@@ -116,7 +116,7 @@ def get_top_states(data, top, output_name):
     total_certif = sum(c.values())
     
     #write data in csv file
-    path = os.path.join('../output/', output_name)
+    path = os.path.join('./output/', output_name)
     with open(path, 'w') as txtfile:
         writer = csv.writer(txtfile, delimiter=';')
         writer.writerow(['TOP_STATES', 
