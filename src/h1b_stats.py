@@ -28,7 +28,7 @@ def read_csv(filename):
     return data
 
 #function to get top occupation
-def get_top_occupations(data, number=10, output_name):
+def get_top_occupations(data, top, output_name):
     """Function which get top occupations from data along with number and
     percentage of certified applications, then saves results as a text file. 
     By default, returns top 10 occupations."""
@@ -54,7 +54,7 @@ def get_top_occupations(data, number=10, output_name):
     
     #count number of each occupation and rank them
     c = Counter(soc_codes)
-    top_10_occup = c.most_common(number)
+    top_10_occup = c.most_common(top)
     
     #sort top 10 occupations by number then name if there are ties
     top_10_occup.sort(key=lambda x: x[0])
@@ -78,10 +78,9 @@ def get_top_occupations(data, number=10, output_name):
     return top_10_occup
   
 #function to get top states
-def get_top_states(data, number=10, output_name):
+def get_top_states(data, top, output_name):
     """Function which get top states from data along with number and
-    percentage of certified applications, then saves results as a text file. 
-    By default, returns top 10 states."""
+    percentage of certified applications, then saves results as a text file."""
     
     #get column names
     col_names = []
@@ -107,7 +106,7 @@ def get_top_states(data, number=10, output_name):
     
     #count number of each occupation and rank them
     c = Counter(states)
-    top_10_states = c.most_common(number)
+    top_10_states = c.most_common(top)
     
     #sort top 10 occupations by number then name if there are ties
     top_10_states.sort(key=lambda x: x[0])
