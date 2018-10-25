@@ -44,4 +44,4 @@ When the code is executed as a script, I collect the name of the input and the t
 
 # Run instructions
 
-To run the script, navigate to the top of the `h1b_stats` directory and run `run.sh` in your shell. It is also possible to directly run the script `h1b_stats.py` in the `src/` folder by placing the input `csv` file in the `input` folder then entering the following instructions in the shell: `python3 ./h1b_stats <input-file-name> <output-file-name-1> <output-file-name-2>. The output files will be saved in the output folder.
+To run the script, navigate to the top of the `h1b_stats` directory and run `run.sh` in your shell. It is also possible to directly run the script `h1b_stats.py` in the `src/` folder by placing the input `csv` file in the `input` folder then entering the following instructions in the shell: `python3 ./h1b_stats <input-file-name> <output-file-name-1> <output-file-name-2>`. The output files will be saved in the output folder.
