@@ -8,7 +8,7 @@
 
 The purpose of the script `h1b_stats.py` is to process H1B visa application data contained in a semicolon-separated file and provide the top occupations and states for certified applications.
 
-There are several problems to overcome to achieve the purpose mentioned above. First, the data need to be read and loaded in a standard Python data structure. Then, we have to filter the data to find the values associated with occupation and state, and count corresponding certified applications. During these steps, one important problem is the inconsistency of column names between files corresponding to different years. After this, the count data need to be sorted in a decreasing fashion for the number of application, but in increasing alphabetical order in case there are ties between occupations. Finally, the data need to be written to a text file. All of this needs to be achieved without the help of non-standard modules such as `pandas`.
+There are several problems to overcome to achieve this. First, the data need to be read. Then, we have to filter the data to find the values associated with occupation and state, and count corresponding certified applications. During these steps, one important problem is the inconsistency of column names between files corresponding to different years. After this, the count data need to be sorted in a decreasing fashion for the number of application, but in increasing alphabetical order in case there are ties between occupations. Finally, the data need to be written to a text file. All of this needs to be achieved without the help of non-standard modules such as `pandas`.
 
 # Approach
 
@@ -16,9 +16,9 @@ Let's explain a possible way to solve each problem.
 
 ## Read the data
 
-To read the data, I implemented the function `read_csv` which takes the input file name as argument. Since the user is expected to put the data in the `./input/` folder, I use the `join` function of the `os.path` module so the user can simply type the file name. I used the `csv` module from the standard library. 
+To read the data, I implemented the function `read_csv` which takes the input file name as argument. Since the user is expected to put the data in the `./input/` folder, I use the `join` function of the `os.path` module so the user can simply type the file name.
 
-First, I declare an empty list, which I will fill with lines I read from the `csv` file. I open the file using `with ... as ...:` to automatically manage file opening and closing, and use the *utf-8* encoding to prevent errors during file reading. Finally, a reader object is declared with the appropriate delimiter (semicolon) and row are iteratively read and added to the previously declared list. The function returns the list containing the data in nested lists. Each nested list contains one row of the original `csv` file.
+First, I declare an empty list, which I will fill with lines I read from the `csv` file. I open the file using `with ... as ...:` to automatically manage file opening and closing, and use the *utf-8* encoding to prevent errors during file reading. Finally, a reader object from the `csv` module is declared with the appropriate delimiter (semicolon) and row are iteratively read and added to the previously declared list. The function returns the list containing the data in nested lists. Each nested list contains one row of the original `csv` file.
 
 ## Get top occupations or states for certified applications
 

@@ -111,3 +111,5 @@ function run_all_tests {
 
 check_project_struct
 run_all_tests
+
+python3 ./tests/test_read_csv/test_read_csv.py
