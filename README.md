@@ -2,7 +2,8 @@
 1. [Problem](README.md#problem)
 2. [Approach](README.md#approach)
 3. [Run instructions](README.md#run-instructions)
-4. [Questions?](README.md#questions?)
+4. [Test instructions](README.md#test-instructions)
+5. [Questions?](README.md#questions?)
 
 # Problem
 
@@ -41,6 +42,10 @@ When the code is executed as a script, I collect the name of the input and the t
 # Run instructions
 
 To run the script, navigate to the top of the `h1b_stats` directory and run `run.sh` in your shell. It is also possible to directly run the script `h1b_stats.py` in the `src/` folder by placing the input `csv` file in the `input` folder then entering the following instructions in the shell: `python3 ./h1b_stats.py <input-file-name> <output-file-name-1> <output-file-name-2>`. The output files will be saved in the output folder.
+
+# Test instructions
+
+The folder `insight_testsuite` contains utilities to test the script `h1b_stats.py`. The shell script `run_tests.sh` will test repository structure and output for the test. A unit test is available for the function `read_csv` of the `h1b_stats.py` script in the folder `insight_testsuite/tests/test_read_csv`. To run it, navigate to this folder and run `test_read_csv.py` with Python in the console.
 
 # Questions?
 
