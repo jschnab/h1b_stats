@@ -34,9 +34,9 @@ def get_top_occupations(data, top, output_name):
     By default, returns top 10 occupations."""
     
     #get column names
-    col_names = []
-    for name in data[0]:
-        col_names.append(name)
+    col_names = data[0]
+    #for name in data[0]:
+    #    col_names.append(name)
     
     #get index for status and occupation name
     for i in range(len(col_names)):
@@ -83,9 +83,9 @@ def get_top_states(data, top, output_name):
     percentage of certified applications, then saves results as a text file."""
     
     #get column names
-    col_names = []
-    for name in data[0]:
-        col_names.append(name)
+    col_names = data[0]
+    #for name in data[0]:
+    #    col_names.append(name)
     
     #get index for status and state name
     #different years have different column names
